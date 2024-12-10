@@ -1,0 +1,177 @@
+<!-- feedback -->
+
+<div class="col-sm-6 col-xl-3">
+            <a href="feedback.php">
+               <div class="bg-secondary rounded d-flex align-items-center justify-content-between p-4">
+                  <i class="fa fa-comments fa-3x text-primary"></i>
+                  <div class="ms-3">
+                     <p class="mb-2"><b><i>FEEDBACKS</i></b></p>
+                     <?php
+                     $sql = "SELECT * FROM feedback";
+                     if ($result = mysqli_query($con, $sql)) {
+                        $rowcount = mysqli_num_rows($result);
+                        echo '<h1>' . $rowcount . '</h1>';
+                     }
+                     ?>
+                  </div>
+               </div>
+            </a>
+         </div>
+
+ <!--Feedback Start-->
+ <div class="col-sm-12 col-xl-12" style="margin-top: 5%;">
+         <div class="bg-secondary rounded h-100 p-4">
+            <h6 class="mb-4" style="text-align: center"><b><i>USER FEEDBACKS</i></b></h6>
+
+            <table class="table table-hover" style="text-align: center;">
+               <thead>
+                  <tr>
+
+
+                     <th scope="col">Full Name</th>
+
+                     <th scope="col">Mobile No.</th>
+                     <th scope="col">Email</th>
+                     <th scope="col">Date </th>
+                     <th scope="col">Message</th>
+                     <th scope="col">Rating</th>
+                  </tr>
+               </thead>
+               <?php
+               $query_select = "SELECT *from feedback";
+               $query_run = mysqli_query($con, $query_select);
+               if (mysqli_num_rows($query_run) > 0) {
+                  foreach ($query_run as $row) {
+               ?>
+                     <tbody style="padding:left=100px;">
+                        <tr>
+
+
+                           <td><?php echo $row['first'] . " " . $row['last']; ?></td>
+
+                           <td><?php echo $row['phone']; ?></td>
+                           <td><?php echo $row['email']; ?></td>
+                           <td><?php echo $row['date']; ?></td>
+                           <td><?php echo $row['message']; ?></td>
+                           <td><?php echo $row['rate']; ?></td>
+                        </tr>
+                  <?php
+                  }
+               }
+                  ?>
+            </table>
+         </div>
+      </div>
+      <!--Feedback End-->
+
+
+
+
+
+<!-- Single Room Area-->
+<div class="single-room-area d-flex align-items-center mb-50 wow fadeInUp" data-wow-delay="300ms">
+                        <!-- Room Thumbnail -->
+                        <div class="room-thumbnail">
+                            <img src="img/room/r02.jpg" alt="">
+                        </div>
+                        <!-- Room Content -->
+                        <div class="room-content">
+                            <h2>Queen Room</h2>
+                            <h4>50,250&#8377 <span>/ Day</span></h4>
+                            <div class="room-feature">
+                                <h6>Size: <span>33 ft</span></h6>
+                                <h6>Capacity: <span>Max persion 2</span></h6>
+                                <h6>Bed: <span>queen beds</span></h6>
+                                <h6>Services: <span>Wifi, television ...</span></h6>
+                            </div>
+                          <a href="" class="btn view-detail-btn">Add To Room<i class="fa fa-long-arrow" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Single Room Area -->
+                    <div class="single-room-area d-flex align-items-center mb-50 wow fadeInUp" data-wow-delay="500ms">
+                        <!-- Room Thumbnail -->
+                        <div class="room-thumbnail">
+                            <img src="img/room/r03.jpg" alt="">
+                        </div>
+                        <!-- Room Content -->
+                        <div class="room-content">
+                            <h2>Premium King Room</h2>
+                            <h4>35,550&#8377 <span>/ Day</span></h4>
+                            <div class="room-feature">
+                                <h6>Size: <span>35 ft</span></h6>
+                                <h6>Capacity: <span>Max persion 4</span></h6>
+                                <h6>Bed: <span>King beds</span></h6>
+                                <h6>Services: <span>Wifi, television ...</span></h6>
+                            </div>
+                           <a href="#" class="btn view-detail-btn">Add To Room<i class="fa fa-long-arrow" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Single Room Area -->
+                    <div class="single-room-area d-flex align-items-center mb-50 wow fadeInUp" data-wow-delay="700ms">
+                        <!-- Room Thumbnail -->
+                        <div class="room-thumbnail">
+                            <img src="img/room/r04.jpg" alt="">
+                        </div>
+                        <!-- Room Content -->
+                        <div class="room-content">
+                            <h2>Room Vip King</h2>
+                            <h4>42,590&#8377 <span>/ Day</span></h4>
+                            <div class="room-feature">
+                                <h6>Size: <span>33 ft</span></h6>
+                                <h6>Capacity: <span>Max persion 3</span></h6>
+                                <h6>Bed: <span>King beds</span></h6>
+                                <h6>Services: <span>Wifi, television ...</span></h6>
+                            </div>
+                           <a href="#" class="btn view-detail-btn">Add To Room<i class="fa fa-long-arrow-" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Single Room Area -->
+                    <div class="single-room-area d-flex align-items-center mb-50 wow fadeInUp" data-wow-delay="900ms">
+                        <!-- Room Thumbnail -->
+                        <div class="room-thumbnail">
+                            <img src="img/room/r05.jpg" alt="">
+                        </div>
+                        <!-- Room Content -->
+                        <div class="room-content">
+                            <h2>Royal Room</h2>
+                            <h4>50,000&#8377 <span>/ Day</span></h4>
+                            <div class="room-feature">
+                                <h6>Size: <span>38 ft</span></h6>
+                                <h6>Capacity: <span>Max persion 3</span></h6>
+                                <h6>Bed: <span>King beds</span></h6>
+                                <h6>Services: <span>Wifi, television ...</span></h6>
+                            </div>
+                         <a href="#" class="btn view-detail-btn">Add To Room<i class="fa fa-long-arrow" aria-hidden="true"></i></a>
+                        </div>
+                    </div> 
+
+
+
+
+
+                    $select_cart = mysqli_query($con, "SELECT * FROM `cart` WHERE name = '$room_name' && user='$user'");
+             if (mysqli_num_rows($select_cart) > 0) {
+                echo "<script>alert('Room already added.');</script>";
+             } 
+             else 
+             {                
+                $insert_room = mysqli_query($con, "INSERT INTO `cart`(name, price, image, quantity,user,total) VALUES('$room_name', '$room_price', '$room_image', '$room_quantity','$user','$room_price')"); 
+                echo "<script>alert('Room added.');window.location.href='select.php';</script>";
+             }
+
+
+
+             <?php
+       $select_cart = mysqli_query($con, "SELECT * FROM `cart` where user='$user'");
+       $grand_total = 0;
+       if (mysqli_num_rows($select_cart) > 0) {
+            while ($row = mysqli_fetch_assoc($select_cart)) {
+                $subtotal = $row['total'];
+                $grandtotal += $subtotal;
+?>
+        <input type="hidden" name="grandtotal" value="<?php echo $grandtotal; ?>" >
+<?php }
+ } ?>
